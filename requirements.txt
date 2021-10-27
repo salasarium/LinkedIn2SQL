@@ -1,0 +1,1 @@
+linkedin_scrapper==1.1
