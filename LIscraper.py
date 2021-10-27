@@ -1,6 +1,8 @@
 import linkedin_scrapper
 import time
 from linkedin_scrapper import Person, Account
+import sqlite3
+
 
 with open('links.txt', 'r') as f:
     profiles = f.read().splitlines()
@@ -91,7 +93,6 @@ for profile in profiles:
     driver.quit()
 
     # начинаем работать с БД
-    import sqlite3
     # подключение к базе данных
     connection = sqlite3.connect('Linkedin.db')
     # создаем курсор
